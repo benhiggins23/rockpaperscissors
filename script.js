@@ -5,12 +5,25 @@ function computerPlay(){
     let randomChoice = computerChoice[Math.floor(Math.random()*computerChoice.length)]
     return randomChoice
 }
+const computerSelection = computerPlay();
 
 //prompt input from player
-let playerInput = prompt("Rock, Paper, or Scissors?");
-const playerSelection = playerInput.toLowerCase();
+const rockbtn = document.querySelectorAll('#rock');
+console.log(rockbtn);
+
+rockbtn.addEventListener("click", testFunction);
+
+function testFunction(){
+  console.log("Hello World");
+
+}
+
+//let playerInput = prompt("Rock, Paper, or Scissors?");
+//const playerSelection = playerInput.toLowerCase();
 //convert text from player to usable format 
-const computerSelection = computerPlay();
+
+
+
 let computerScore=0;
 let playerScore=0;
 
@@ -47,7 +60,7 @@ function playRockPaperScissors(playerSelection, computerSelection){
     }
     
 }
-
+/*
 function game(){
 
     for(let i=1; i<6; i++){
@@ -59,25 +72,4 @@ function game(){
         console.log("Your Score: "+playerScore+"\nComputer Score: "+computerScore);
     }
 }
-
-//"You tied, please play again." playerSelection+"ties with"+computerSelection
-/*
-
-    
-
-    }
-    else if {
-
-
-    }
-
-
-    
-    return "You," + playerResult +"!"+ winningSelection "beats" losingSelection
-
 */
-//console.log(playerSelection)
-//console.log(computerSelection)
-//console.log(playRockPaperScissors(playerSelection,computerSelection))
-//console.log(game())
-game();
